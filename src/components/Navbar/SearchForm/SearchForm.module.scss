@@ -1,0 +1,84 @@
+.searchForm {
+  // DARK & LIGHT MODE STYLES
+  // DARK MODE
+  &.dark {
+    .searchInput {
+      color: #eee;
+      background: #2C2C33;
+    }
+    .submitBtn {
+      &:hover {
+        background: rgba(0,0,0,0.2);
+      }
+      &:focus {
+        background: rgba(0,0,0,0.3);
+      }
+      .searchIcon {
+        svg {
+          fill: #fff;
+        }
+      }
+    }
+  }
+  // LIGHT MODE
+  &.light {
+    .searchInput {
+      color: #111;
+      background: #F9F9F9;
+    }
+    .submitBtn {
+      &:hover {
+        background: rgba(0,0,0,0.05);
+      }
+      &:focus {
+        background: rgba(0,0,0,0.15);
+      }
+      .searchIcon {
+        svg {
+          fill: #111;
+        }
+      }
+    }
+  }
+
+
+  // GENERAL STYLES
+  position: relative;
+  width: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .searchInput {
+    width: 100%;
+    height: 44px;
+    outline: none;
+    font-size: 16px;
+    padding: 12px 46px 12px 23px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 1px solid transparent;
+    border-radius: 22px;
+    transition: 0.35s ease;
+    &:focus {
+      border: 1px solid #0077a7;
+    }
+    &::placeholder {
+      color: #808085;
+    }
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+  .submitBtn {
+    position: absolute;
+    top: 9%;
+    right: 0.7%;
+    padding: 10px 9px 7px 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    .searchIcon {
+      display: block;
+      width: 19px;
+      height: 19px;
+    }
+  }
+}
