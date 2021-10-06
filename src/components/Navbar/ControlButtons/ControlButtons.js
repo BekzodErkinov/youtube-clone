@@ -3,6 +3,9 @@ import { useContext, useState } from 'react'
 // Contexts
 import { ThemeContext } from '../../../helper/Contexts'
 
+// Components
+import { Profile } from '../'
+
 // Icons
 import {
   CreateVideoIcon,
@@ -12,7 +15,6 @@ import {
   LiveIcon,
 } from '../../../assets/icons/icons'
 // Images
-import UserImg from '../../../assets/images/Avatar.png'
 import YouTube from '../../../assets/images/youtube.png'
 import YouTubeTV from '../../../assets/images/youtube-tv.png'
 import YouTubeKids from '../../../assets/images/kids-pool.png'
@@ -118,60 +120,9 @@ const ControlButtons = () => {
 
 
       {/* PROFILE */}
-      <button
-        className={styles.profileBtn}
-      >
-        <img width="40" height="40" src={UserImg} alt="User avatar" />
-      </button>
+      <Profile generalMenuStyle={styles.menu} />
     </div>
   )
 }
 
 export default ControlButtons
-
-
-/*
-YT Studio
-<img src="https://img.icons8.com/carbon-copy/100/000000/youtube-studio.png"/>
-
-You Channel
-<img src="https://img.icons8.com/ios/48/000000/name--v2.png"/>
-
-DOllar light
-<img src="https://img.icons8.com/ios/50/000000/us-dollar--v1.png"/>
-BOld
-<img src="https://img.icons8.com/ios/50/000000/us-dollar--v2.png"/>
-
-shield
-<img src="https://img.icons8.com/material-outlined/80/000000/user-shield.png"/>
-
-s acc
-<img src="https://img.icons8.com/ios/30/000000/user-group-man-man.png"/>
-
-out
-<img src="https://img.icons8.com/fluency-systems-regular/48/000000/exit.png"/>
-
-theme
-<img src="https://img.icons8.com/ios-filled/50/000000/moon-symbol.png"/>
-light
-<img src="https://img.icons8.com/ios/50/000000/moon-symbol.png"/>
-
-lang
-<img src="https://img.icons8.com/ios/48/000000/language.png"/>
-
-earth
-<img src="https://img.icons8.com/ios/48/000000/globe.png"/>
-
-setting
-<img src="https://img.icons8.com/windows/24/000000/settings--v1.png"/>
-
-
-help
-<img src="https://img.icons8.com/material-outlined/24/000000/help.png"/>
-
-feed
-<img src="https://img.icons8.com/material-outlined/24/000000/comments--v1.png"/>
-
-key
-<img src="https://img.icons8.com/windows/30/000000/keyboard.png"/>
-*/

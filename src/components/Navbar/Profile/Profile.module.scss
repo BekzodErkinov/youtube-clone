@@ -1,0 +1,27 @@
+.profile {
+  .profileMenu {
+    top: -23px;
+    left: -240px;
+    min-width: 440px;
+    .lead {
+      display: flex;
+      align-items: center;
+      padding: 6px 10px;
+      border-bottom: 1px solid rgb(101,101,101,0.15);
+      .txt {
+        margin-left: 10px;
+        button {
+          color: #3463ff;
+          margin-top: 6px;
+          padding: 0;
+        }
+      }
+    }
+    .settings {
+      padding-top: 10px;
+      overflow-y: auto;
+      max-height: 500px;
+    }
+  }
+}
+
