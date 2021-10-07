@@ -9,7 +9,7 @@ import UserImg from '../../../assets/images/Avatar.png'
 import styles from './Profile.module.scss'
 
 
-const Profile = ({ generalMenuStyle }) => {
+const Profile = ({ generalMenuStyle, displays }) => {
   // Contexts
   const { theme, setTheme } = useContext(ThemeContext)
 
@@ -22,8 +22,14 @@ const Profile = ({ generalMenuStyle }) => {
   // Appearance
   const [appearanceDisplay, setAppearanceDisplay] = useState(false)
 
-  // Toggle "Profile" menu
+  // Toggle "Profile" menu. Hide other windows
   function toggleProfileMenu() {
+    // Hide other windows
+    displays.setYTAppsDisplay(false)
+    displays.setAddVideoDisplay(false)
+    displays.setNotificationsDisplay(false)
+
+    // Profile display
     setProfileDisplay(!profileDisplay)
     if (appearanceDisplay) {
       setAppearanceDisplay(!appearanceDisplay)

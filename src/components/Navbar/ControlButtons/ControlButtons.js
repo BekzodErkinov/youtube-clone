@@ -32,12 +32,33 @@ const ControlButtons = () => {
   const [YTAppsDisplay, setYTAppsDisplay] = useState(false)
   const [notificationsDisplay, setNotificationsDisplay] = useState(false)
 
+  // Toggle "Add Video Menu" and hide other windows
+  function toggleAddVideoMenu() {
+    setYTAppsDisplay(false)
+    setAddVideoDisplay(!addVideoDisplay)
+    setNotificationsDisplay(false)
+  }
+
+  // Toggle "YouTube Apps Menu" and hide other windows
+  function toggleYouTubeApps() {
+    setYTAppsDisplay(!YTAppsDisplay)
+    setAddVideoDisplay(false)
+    setNotificationsDisplay(false)
+  }
+
+  // Toggle "Notification Menu" and hide other windows
+  function toggleNotificationMenu() {
+    setYTAppsDisplay(false)
+    setAddVideoDisplay(false)
+    setNotificationsDisplay(!notificationsDisplay)
+  }
+
   return (
     <div className={`${styles.controlButtons} ${styles[theme]}`}>
       {/* ADD VIDEO */}
       <button
         className={styles.addVideoBtn}
-        onClick={() => setAddVideoDisplay(!addVideoDisplay)}
+        onClick={() => toggleAddVideoMenu()}
       >
         {<CreateVideoIcon/>}
       </button>
@@ -59,7 +80,7 @@ const ControlButtons = () => {
       {/* YOUTUBE APPS */}
       <button
         className={styles.youtubeAppsBtn}
-        onClick={() => setYTAppsDisplay(!YTAppsDisplay)}
+        onClick={() => toggleYouTubeApps()}
       >
         {<CircledMenuIcon/>}
       </button>
@@ -93,7 +114,7 @@ const ControlButtons = () => {
       {/* NOTIFICATION */}
       <button
         className={styles.notificationBtn}
-        onClick={() => setNotificationsDisplay(!notificationsDisplay)}
+        onClick={() => toggleNotificationMenu()}
       >
         {<NotificationIcon/>}
       </button>
@@ -120,7 +141,10 @@ const ControlButtons = () => {
 
 
       {/* PROFILE */}
-      <Profile generalMenuStyle={styles.menu} />
+      <Profile
+        generalMenuStyle={styles.menu}
+        displays={{setAddVideoDisplay, setYTAppsDisplay, setNotificationsDisplay}}
+      />
     </div>
   )
 }
