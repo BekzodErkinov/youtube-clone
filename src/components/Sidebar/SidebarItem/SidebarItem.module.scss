@@ -1,0 +1,84 @@
+.sidebarItem {
+  // DARK & LIGHT MODE STYLES
+  // DARK MODE
+  &.dark {
+    color: rgba(255, 255, 255, 0.5);
+
+    // State
+    &:hover {
+      color: #f00;
+    }
+
+    .icon {
+      svg {
+        fill: #fff;
+      }
+    }
+
+    // ACTIVE
+    &.active {
+      color: #f00;
+      background: rgba(0,0,0,0.2);
+      .icon {
+        svg {
+          fill: #f00;
+        }
+      }
+    }
+  }
+
+  // LIGHT MODE
+  &.light {
+    color: rgb(137, 137, 137);
+
+    // State
+    &:hover {
+      color: #f00;
+    }
+
+    .icon {
+      svg {
+        fill: rgb(137, 137, 137);
+      }
+    }
+
+    // ACTIVE
+    &.active {
+      color: #f00;
+      background: rgba(0,0,0,0.08);
+      .icon {
+        svg {
+          fill: #f00;
+        }
+      }
+    }
+  }
+
+
+  // GENERAL STYLES
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 6px;
+  transition: background 0.3s ease;
+
+  // State
+  &:hover {
+    color: #f00;
+    .icon {
+      svg {
+        fill: #f00;
+      }
+    }
+  }
+
+  .icon {
+    margin: 0 20px;
+    svg {
+      transition: all 0.3s ease;
+    }
+  }
+  .txt {
+    transition: all 0.3s ease;
+  }
+}

@@ -1,0 +1,57 @@
+// $sidebar-bg-color: #17171e !default;
+// $sidebar-color: rgba(255, 255, 255, 0.5);
+// $highlight-color: #f00;
+
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';
+
+// Sidebar
+.pro-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin-top: 84px;
+
+  &.sidebar_dark .pro-sidebar-layout {
+    svg {
+      fill: rgb(255, 255, 255);
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #3a3b44;
+      outline: 1px solid #3a3853;
+    }
+  }
+
+  &.sidebar_light .pro-sidebar-layout {
+    svg {
+      fill: #111;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: #909096;
+      outline: 1px solid #84838b;
+    }
+  }
+
+  .pro-sidebar-layout {
+    padding-bottom: 100px;
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    li {
+      &.active {
+        svg {
+          fill: #f00;
+        }
+      }
+      &:hover .pro-icon {
+        svg {
+          fill: #f00;
+        }
+      }
+    }
+  }
+}

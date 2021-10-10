@@ -1,0 +1,17 @@
+.App {
+  background: #333;// Vaqtinchalik
+  min-height: 100vh;
+
+  &.sidebar_open .mainContent {
+    margin-left: 220px;
+  }
+  &.sidebar_close .mainContent {
+    margin-left: 80px;
+  }
+
+  .mainContent {
+    display: flex;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+}
