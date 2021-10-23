@@ -25,6 +25,8 @@ function App() {
   const [theme, setTheme] = useState('dark')
   const [sidebar, setSidebar] = useState(false)
 
+  console.log(sidebar);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`${styles.App} ${sidebar ? styles.sidebar_close : styles.sidebar_open}`}>

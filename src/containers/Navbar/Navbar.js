@@ -19,7 +19,7 @@ import {
 // SCSS
 import styles from './Navbar.module.scss'
 
-const Navbar = ({ sidebar }) => {
+const Navbar = ({ sidebar, setSidebar }) => {
   const { theme } = useContext(ThemeContext)
 
   return (

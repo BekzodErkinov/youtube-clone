@@ -12,6 +12,9 @@
     .icon {
       svg {
         fill: #fff;
+        g {
+          fill: #fff;
+        }
       }
     }
 
@@ -22,6 +25,9 @@
       .icon {
         svg {
           fill: #f00;
+          g {
+            fill: #f00;
+          }
         }
       }
     }
@@ -39,6 +45,9 @@
     .icon {
       svg {
         fill: rgb(137, 137, 137);
+        g {
+          fill: rgb(137, 137, 137);
+        }
       }
     }
 
@@ -49,6 +58,9 @@
       .icon {
         svg {
           fill: #f00;
+          g {
+            fill: #f00;
+          }
         }
       }
     }
@@ -68,17 +80,33 @@
     .icon {
       svg {
         fill: #f00;
+        g {
+          fill: #f00;
+        }
       }
     }
   }
 
   .icon {
-    margin: 0 20px;
+    margin: 0 14px 0 20px;
     svg {
+      width: 20px;
+      height: 20px;
       transition: all 0.3s ease;
     }
   }
+  .img {
+    width: 28px;
+    height: 28px;
+    margin-left: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+  }
   .txt {
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     transition: all 0.3s ease;
   }
 }

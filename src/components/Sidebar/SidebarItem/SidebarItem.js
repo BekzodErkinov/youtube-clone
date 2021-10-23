@@ -8,7 +8,7 @@ import { ThemeContext } from '../../../helper/Contexts'
 import styles from './SidebarItem.module.scss'
 
 
-const SidebarItem = ({ icon, path, title }) => {
+const SidebarItem = ({ icon, img, path, title }) => {
   // Context
   const { theme } = useContext(ThemeContext)
 
@@ -26,9 +26,13 @@ const SidebarItem = ({ icon, path, title }) => {
   return (
     <Link
       to={path}
+      title={title}
       className={`${styles.sidebarItem} ${styles[theme]} ${setActive(title) && styles.active}`}
     >
-      <span className={styles.icon}>{icon}</span>
+      {icon ?
+        <span className={styles.icon}>{icon}</span> :
+        <img width="30" height="30" className={styles.img} src={img} alt={title} />
+      }
       <span className={styles.txt}>{title}</span>
     </Link>
   )
