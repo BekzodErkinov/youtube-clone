@@ -36,7 +36,7 @@ const Navbar = ({ sidebar, setSidebar }) => {
             <span className={styles.logoIcon}>{<YouTubeLogo />}</span>
             <span className={styles.logoTxt}>
               {theme === 'dark' ? <YouTubeLogoTxtDarkMode /> : <YouTubeLogoTxtLightMode />}
-              {/* Ko'p mavzuli dasturda bu usul ishlamidi. Fnc, switch-case bn qilish kk */}
+              {/* Ko'p mavzuli dasturda bu usul ishlamaydi. Fnc, switch-case bilann qilish kerak */}
             </span>
           </Link>
         </div>

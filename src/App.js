@@ -25,15 +25,15 @@ function App() {
   const [theme, setTheme] = useState('dark')
   const [sidebar, setSidebar] = useState(false)
 
-  console.log(sidebar);
-
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className={`${styles.App} ${sidebar ? styles.sidebar_close : styles.sidebar_open}`}>
+      <div className={`${styles.App} ${styles[theme]} ${sidebar && styles.sidebar_close}`}>
         <Router>
           <Suspense fallback={<div className={styles.loaderAnimation}>Loading...</div>}>
+            {/* Navbar */}
             <Navbar sidebar={{ sidebar, setSidebar }} />
             <main className={styles.mainContent}>
+              {/* Sidebar */}
               <Sidebar togglerSidebar={sidebar} />
               <Switch>
                 <Route exact path="/" component={Home} />

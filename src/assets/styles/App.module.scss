@@ -1,17 +1,83 @@
+// General Styles
+html { box-sizing: border-box; }
+
+*,
+*:before,
+*:after { box-sizing: inherit; }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+}
+
+.container {
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+
 .App {
-  background: #333;// Vaqtinchalik
+  // DARK & LIGHT MODE STYLES
+  // DARK MODE
+  &.dark {
+    background: #17171e;
+  }
+  // LIGHT MODE
+  &.light {
+    background: #f2f2f2;
+  }
+
+
   min-height: 100vh;
 
-  &.sidebar_open .mainContent {
-    margin-left: 220px;
+  .loaderAnimation {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
+
   &.sidebar_close .mainContent {
-    margin-left: 80px;
+    margin-left: 20px;
   }
 
   .mainContent {
-    display: flex;
+    min-height: 100vh;
     padding: 10px;
+    padding-right: 0;
+    margin-left: 260px;
     transition: all 0.3s ease;
   }
 }
