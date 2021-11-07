@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 // Contexts
 import { ThemeContext } from '../../../helper/Contexts'
@@ -66,36 +67,36 @@ const Profile = ({ generalMenuStyle, displays }) => {
             <img width="80" src={UserImg} alt="User" />
             <div className={styles.txt}>
               <h3>John Doe</h3>
-              <button>Manage your Google Account</button>
+              <button className={styles.link}>Manage your Google Account</button>
             </div>
           </div>
 
           <div className={styles.settings}>
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/ios/30/${imgColor}/name--v2.png`} alt="Your channel" />
                 <h4>Your channel</h4>
               </div>
             </button>
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/ios/30/${imgColor}/us-dollar--v1.png`} alt="Purchases and memberships" />
                 <h4>Purchases and memberships</h4>
               </div>
             </button>
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/carbon-copy/35/${imgColor}/youtube-studio.png`} alt="YouTube Studio" />
                 <h4>YouTube Studio</h4>
               </div>
             </button>
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/ios/30/${imgColor}/user-group-man-man.png`} alt="Switch account" />
                 <h4>Switch account</h4>
               </div>
             </button>
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/fluency-systems-regular/30/${imgColor}/exit.png`} alt="Sign out" />
                 <h4>Sign out</h4>
@@ -103,7 +104,7 @@ const Profile = ({ generalMenuStyle, displays }) => {
             </button>
 
             {/* Appearance button */}
-            <button onClick={holderThemeChanger}>
+            <button className={styles.link} onClick={holderThemeChanger}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/ios/30/${imgColor}/moon-symbol.png`} alt="Appearance" />
                 <h4>Appearance:<span>{theme}</span></h4>
@@ -111,56 +112,57 @@ const Profile = ({ generalMenuStyle, displays }) => {
               <img className={styles.arrow} src={`https://img.icons8.com/material/24/${imgColor}/more-than--v1.png`} alt="More than" />
             </button>
 
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/ios/30/${imgColor}/language.png`} alt="Language" />
                 <h4>Language: English</h4>
               </div>
             </button>
-            <button>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/ios/30/${imgColor}/globe.png`} alt="Location" />
                 <h4>Location: United Sates</h4>
               </div>
             </button>
-            <button>
+            <Link className={styles.link} to='/settings'>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/windows/30/${imgColor}/settings--v1.png`} alt="Settings" />
                 <h4>Settings</h4>
               </div>
-            </button>
-            <button>
+            </Link>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/material-outlined/30/${imgColor}/user-shield.png`} alt="Your data in YouTube" />
                 <h4>Your data in YouTube</h4>
               </div>
             </button>
-            <button>
+            <Link className={styles.link} to='/help'>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/material-outlined/30/${imgColor}/help.png`} alt="Help" />
                 <h4>Help</h4>
               </div>
-            </button>
-            <button>
+            </Link>
+            <Link className={styles.link} to='/send feedback'>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/material-outlined/30/${imgColor}/comments--v1.png`} alt="Send Feedback" />
                 <h4>Send Feedback</h4>
               </div>
-            </button>
-            <button>
+            </Link>
+            <button className={styles.link}>
               <div className={styles.lead}>
                 <img src={`https://img.icons8.com/windows/30/${imgColor}/keyboard.png`} alt="Keyboard shortcuts" />
                 <h4>Keyboard shortcuts</h4>
               </div>
             </button>
 
-            <button>
+            <button className={styles.link}>
               <h4>Restricted Mode: Off</h4>
               <img className={styles.arrow} src={`https://img.icons8.com/material/24/${imgColor}/more-than--v1.png`} alt="More than" />
             </button>
           </div>
         </div>
       )}
+
 
       {/* Appearance Menu */}
       {appearanceDisplay &&

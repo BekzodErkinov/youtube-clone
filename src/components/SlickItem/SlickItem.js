@@ -6,10 +6,12 @@ import { ThemeContext } from '../../helper/Contexts'
 
 // SCSS
 import styles from './SlickItem.module.scss'
+import './SlickItem.scss'
 
 const SlickItem = ({ id, img, date, name, time, views, title }) => {
   const { theme } = useContext(ThemeContext)
 
+  // Date maker function
   function makeDate(date) {
     const d = +date
     if (d === 1)
@@ -36,6 +38,9 @@ const SlickItem = ({ id, img, date, name, time, views, title }) => {
       return 'Now'
   }
 
+  // Name maker function. (Bu yo'l to'g'ri yechim emas!)
+  // const makeName = name => name.replace(' (dir.)', '').split(',')[0]
+
   return (
     <Link className={`${styles.link} ${styles[theme]}`} to={`/v/${id}`}>
       <header>
@@ -44,11 +49,12 @@ const SlickItem = ({ id, img, date, name, time, views, title }) => {
       </header>
       <main>
         <img className={styles.img} width="250" height="150" src={img} alt={title} />
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={styles.title} title={title}>{title}</h3>
       </main>
       <footer>
         <span className={styles.views}>{views === '' ? 1 : views}k</span>
         <span className={styles.date}>{makeDate(date)}</span>
+        {/* <span className={styles.name}>{makeName(name)}</span> */}
         <span className={styles.name}>{name}</span>
       </footer>
     </Link>

@@ -1,0 +1,35 @@
+.error {
+  // DARK & LIGHT MODE STYLES
+  // DARK MODE
+  &.dark {
+    color: rgb(255 255 255 / 50%);
+    background: #17171e;
+
+    .imgLightMode {
+      display: none;
+    }
+  }
+  // LIGHT MODE
+  &.light {
+    color: #19202c;
+    background: #f2f2f2;
+    .imgDarkMode {
+      display: none;
+    }
+  }
+
+
+  // GENERAL STYLES
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  img {
+    border-radius: 8px;
+  }
+}

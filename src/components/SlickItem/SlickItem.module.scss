@@ -95,8 +95,9 @@
       }
     }
     .name {
-      margin-left: auto;
       max-width: 120px;
+      margin-left: auto;
+      padding-right: 10px;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;

@@ -37,7 +37,7 @@
       padding: 6px 10px;
       .txt {
         margin-left: 10px;
-        button {
+        .link {
           color: #3463ff;
           margin-top: 6px;
           padding: 0;
@@ -54,7 +54,8 @@
       &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
       }
-      button {
+      .link {
+        color: #eee;
         width: 100%;
         padding: 10px 20px;
         margin-bottom: 2px;
@@ -124,6 +125,9 @@
     .themeBtn {
       width: 100%;
       padding: 10px 0px;
+      &[disabled] {
+        cursor: not-allowed;
+      }
       .checkIcon {
         width: 30px;
         margin-right: 10px;

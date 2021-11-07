@@ -1,12 +1,16 @@
 .home {
-  // DARK & LIGHT MODE STYLES
-  // DARK MODE
-  &.dark {}
-
-  // LIGHT MODE
-  &.light {}
-
-
-  // GENERAL STYLES
-  margin-top: 90px;
+  margin-top: 15px;
+  .videoTypes {
+    .home__slider {
+      @media (min-width: 1024px) {
+        min-width: 1350px;
+      }
+      @media (min-width: 1440px) {
+        min-width: 1440px;
+      }
+      @media (min-width: 1850px) {
+        min-width: 1650px;
+      }
+    }
+  }
 }

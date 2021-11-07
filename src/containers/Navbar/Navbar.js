@@ -19,7 +19,7 @@ import {
 // SCSS
 import styles from './Navbar.module.scss'
 
-const Navbar = ({ sidebar, setSidebar }) => {
+const Navbar = ({ sidebar }) => {
   const { theme } = useContext(ThemeContext)
 
   return (
@@ -36,7 +36,7 @@ const Navbar = ({ sidebar, setSidebar }) => {
             <span className={styles.logoIcon}>{<YouTubeLogo />}</span>
             <span className={styles.logoTxt}>
               {theme === 'dark' ? <YouTubeLogoTxtDarkMode /> : <YouTubeLogoTxtLightMode />}
-              {/* Ko'p mavzuli dasturda bu usul ishlamaydi. Fnc, switch-case bilann qilish kerak */}
+              {/* Ko'p mavzuli dasturda bu usul ishlamaydi. Fnc, switch-case bilan qilinishi kerak */}
             </span>
           </Link>
         </div>

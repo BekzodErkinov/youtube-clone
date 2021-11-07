@@ -1,0 +1,35 @@
+.prevArrow,
+.nextArrow {
+  // DARK & LIGHT MODE STYLES
+  // DARK MODE
+  &.dark {
+    background: rgba(255,255,255,0.1) !important;
+    svg {
+      fill: #828285;
+    }
+  }
+  // LIGHT MODE
+  &.light {
+    background: rgba(0,0,0,0.24) !important;
+    svg {
+      fill: #fff;
+    }
+  }
+
+
+  // GENERAL STYLES
+  position: absolute;
+  top: -30%;
+  left: 75%;
+  padding: 9px 9px 6px 11px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prevArrow {
+  left: 71%;
+  padding: 9px 11px 6px 9px;
+  svg {
+    transform: rotate(180deg);
+  }
+}

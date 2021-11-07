@@ -28,8 +28,8 @@ const ControlButtons = () => {
   const { theme } = useContext(ThemeContext)
 
   // Toggle Buttons
-  const [addVideoDisplay, setAddVideoDisplay] = useState(false)
   const [YTAppsDisplay, setYTAppsDisplay] = useState(false)
+  const [addVideoDisplay, setAddVideoDisplay] = useState(false)
   const [notificationsDisplay, setNotificationsDisplay] = useState(false)
 
   // Toggle "Add Video Menu" and hide other windows

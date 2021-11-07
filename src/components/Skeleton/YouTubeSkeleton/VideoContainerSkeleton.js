@@ -6,7 +6,7 @@ import ContentLoader from 'react-content-loader'
 // Context
 import { ThemeContext } from '../../../helper/Contexts'
 
-const YouTubeSkeleton = ({
+const VideoContainerSkeleton = ({
   heading = { width: 140, height: 24 },
   row = 1,
   column = 5,
@@ -53,6 +53,7 @@ const YouTubeSkeleton = ({
         ry={0}
         width={headingWidth}
         height={headingHeight}
+        key={i}
       />
     )
 
@@ -107,4 +108,4 @@ const YouTubeSkeleton = ({
   )
 }
 
-export default YouTubeSkeleton
+export default VideoContainerSkeleton
