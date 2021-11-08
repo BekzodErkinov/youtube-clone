@@ -1,0 +1,22 @@
+.navbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 80px;
+  padding: 15px 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+
+  .left, .right {
+    display: flex;
+    align-items: flex-start;
+  }
+  .left {
+    .square {
+      margin: 0 20px 0 5px;
+    }
+    .input {
+      margin-top: 4px;
+    }
+  }
+}

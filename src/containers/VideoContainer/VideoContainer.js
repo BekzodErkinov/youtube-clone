@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 import { ThemeContext } from '../../helper/Contexts'
 
 // Components
-import VideoContainerSkeleton from '../../components/Skeleton/YouTubeSkeleton/VideoContainerSkeleton'
+import { VideoContainerSkeleton } from '../../components/Skeleton/index'
 
 // SCSS
 import styles from './VideoContainer.module.scss'

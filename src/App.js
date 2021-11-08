@@ -8,6 +8,9 @@ import {
 // Contexts
 import { ThemeContext } from './helper/Contexts'
 
+// Components
+import MainSkeleton from './containers/Skeleton/MainSkeleton/MainSkeleton'
+
 // Containers
 import Navbar from './containers/Navbar/Navbar'
 import Sidebar from './containers/Sidebar'
@@ -56,12 +59,14 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`${styles.App} ${styles[theme]} ${sidebar && styles.sidebar_close}`}>
         <Router>
-          <Suspense fallback={<div className={styles.loaderAnimation}>Loading...</div>}>
+          <Suspense fallback={<MainSkeleton />}>
             {/* Navbar */}
             <Navbar sidebar={{ sidebar, setSidebar }} />
+            {/* Main content */}
             <main className={styles.mainContent}>
               {/* Sidebar */}
               <Sidebar togglerSidebar={sidebar} />
+              {/* Pages */}
               <Switch>
                 <Route exact path="/" component={Home} />
                 <Route path="/v/:video_id" component={SingleVideo} />

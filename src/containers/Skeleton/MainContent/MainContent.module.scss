@@ -1,0 +1,9 @@
+.mainContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .videoContainer {
+    margin: 10px 0 20px;
+  }
+}

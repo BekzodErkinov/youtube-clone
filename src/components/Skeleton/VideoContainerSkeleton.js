@@ -4,14 +4,14 @@ import { useContext } from 'react'
 import ContentLoader from 'react-content-loader'
 
 // Context
-import { ThemeContext } from '../../../helper/Contexts'
+import { ThemeContext } from '../../helper/Contexts'
 
 const VideoContainerSkeleton = ({
   heading = { width: 140, height: 24 },
   row = 1,
-  column = 5,
-  width = 1366,
-  padding = 12,
+  column = 7,
+  width = 1466,
+  padding = 15,
   borderRadius = 4,
   ...props
 }) => {
