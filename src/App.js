@@ -9,7 +9,7 @@ import {
 import { ThemeContext } from './helper/Contexts'
 
 // Components
-import MainSkeleton from './containers/Skeleton/MainSkeleton/MainSkeleton'
+import Skeleton from './containers/Skeleton/Skeleton/Skeleton'
 
 // Containers
 import Navbar from './containers/Navbar/Navbar'
@@ -59,7 +59,7 @@ function App() {
     <ThemeContext.Provider value={{ theme, setTheme }}>
       <div className={`${styles.App} ${styles[theme]} ${sidebar && styles.sidebar_close}`}>
         <Router>
-          <Suspense fallback={<MainSkeleton />}>
+          <Suspense fallback={ <Skeleton /> }>
             {/* Navbar */}
             <Navbar sidebar={{ sidebar, setSidebar }} />
             {/* Main content */}

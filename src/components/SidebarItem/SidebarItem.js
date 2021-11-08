@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 
 // Contexts
-import { ThemeContext } from '../../../helper/Contexts'
+import { ThemeContext } from '../../helper/Contexts'
 
 // SCSS
 import styles from './SidebarItem.module.scss'

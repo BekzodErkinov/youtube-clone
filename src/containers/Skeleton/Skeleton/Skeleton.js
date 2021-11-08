@@ -4,11 +4,11 @@ import Sidebar from '../Sidebar/Sidebar'
 import MainContent from '../MainContent/MainContent'
 
 // SCSS
-import styles from './MainSkeleton.module.scss'
+import styles from './Skeleton.module.scss'
 
-const MainSkeleton = () => {
+const Skeleton = () => {
   return (
-    <div className={styles.mainSkeleton}>
+    <div className={styles.skeleton}>
       <Navbar />
       <main>
         <Sidebar />
@@ -18,4 +18,4 @@ const MainSkeleton = () => {
   )
 }
 
-export default MainSkeleton
+export default Skeleton

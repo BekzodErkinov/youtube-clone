@@ -16,6 +16,7 @@ const Favorites = () => {
   return (
     <div className={`${styles.favorites} ${styles[theme]}`}>
       <h1>Favorites</h1>
+      <h2></h2>
       <div className={styles.wrapper}>
         <video
           loop

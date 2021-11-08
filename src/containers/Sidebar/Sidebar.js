@@ -9,7 +9,7 @@ import {
 } from './MenuItemsData'
 
 // Components
-import SidebarItem from '../../components/Sidebar/SidebarItem/SidebarItem'
+import SidebarItem from '../../components/SidebarItem/SidebarItem'
 
 // Icons
 import { SettingsIcon, ShowMoreOrLessIcon } from '../../assets/icons/icons'
